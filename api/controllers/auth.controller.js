@@ -7,12 +7,8 @@ const bcrypt = require('bcrypt')
 // -> save on database User with params of Req.Body
 const signup = (req, res) => {
 
-    const user = User.create({
-        name: "Pepon",
-        email: req.body.name
-        password: 
-    })
-
+    const user = User.create(req.body)
+        res.send(req.data)
 }
 
 module.exports = { signup }

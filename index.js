@@ -20,7 +20,7 @@ const start = async () => {
 
 
         //  Server Start Listen
-        await app.listen(process.env.PORT)
+        await app.listen(process.env.PORT)<<
         
         //2. Method to connect DB from sequelize
         await connectDB()
@@ -39,8 +39,8 @@ const connectDB = async () => {
         console.log("Connected to DB")
 
         //Sync DB with Models
-        await sequelize.sync({alter: true })
-        console.log("DB Sync")
+       // await sequelize.sync()
+      //  console.log("DB Sync")
 
     } catch (error) {
         console.log(error)
